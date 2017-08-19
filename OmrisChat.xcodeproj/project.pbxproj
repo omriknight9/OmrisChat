@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A25E4A11F48642F0084AC99 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25E4A01F48642F0084AC99 /* SelectUserViewController.swift */; };
+		5A25E4A31F4873030084AC99 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A25E4A21F4873030084AC99 /* user.swift */; };
 		5A37D72A1F24D29A00BCE48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A37D7291F24D29A00BCE48A /* AppDelegate.swift */; };
 		5A37D72C1F24D29A00BCE48A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A37D72B1F24D29A00BCE48A /* ViewController.swift */; };
 		5A37D72F1F24D29A00BCE48A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A37D72D1F24D29A00BCE48A /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		2CE17BA2736DE0A7E76597B5 /* Pods_OmrisChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OmrisChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A25E4A01F48642F0084AC99 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		5A25E4A21F4873030084AC99 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		5A37D7261F24D29A00BCE48A /* OmrisChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmrisChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A37D7291F24D29A00BCE48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A37D72B1F24D29A00BCE48A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A25E4A41F4873200084AC99 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A37D72B1F24D29A00BCE48A /* ViewController.swift */,
+				5AF47AA91F24DCFC00438815 /* SnapsViewController.swift */,
+				5AF47AAB1F24DFA300438815 /* PictureViewController.swift */,
+				5A25E4A01F48642F0084AC99 /* SelectUserViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5A25E4A51F48733A0084AC99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A25E4A21F4873030084AC99 /* user.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		5A37D71D1F24D29A00BCE48A = {
 			isa = PBXGroup;
 			children = (
@@ -114,11 +135,9 @@
 		5A37D7281F24D29A00BCE48A /* OmrisChat */ = {
 			isa = PBXGroup;
 			children = (
+				5A25E4A41F4873200084AC99 /* ViewControllers */,
+				5A25E4A51F48733A0084AC99 /* Models */,
 				5A37D7291F24D29A00BCE48A /* AppDelegate.swift */,
-				5A37D72B1F24D29A00BCE48A /* ViewController.swift */,
-				5AF47AA91F24DCFC00438815 /* SnapsViewController.swift */,
-				5AF47AAB1F24DFA300438815 /* PictureViewController.swift */,
-				5A25E4A01F48642F0084AC99 /* SelectUserViewController.swift */,
 				5A37D72D1F24D29A00BCE48A /* Main.storyboard */,
 				5A37D7331F24D29A00BCE48A /* Assets.xcassets */,
 				5A37D7351F24D29A00BCE48A /* LaunchScreen.storyboard */,
@@ -357,6 +376,7 @@
 				5A37D7321F24D29A00BCE48A /* OmrisChat.xcdatamodeld in Sources */,
 				5A37D72C1F24D29A00BCE48A /* ViewController.swift in Sources */,
 				5A25E4A11F48642F0084AC99 /* SelectUserViewController.swift in Sources */,
+				5A25E4A31F4873030084AC99 /* user.swift in Sources */,
 				5A37D72A1F24D29A00BCE48A /* AppDelegate.swift in Sources */,
 				5AF47AAC1F24DFA300438815 /* PictureViewController.swift in Sources */,
 			);

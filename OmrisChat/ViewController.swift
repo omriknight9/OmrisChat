@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-        
         view.addGestureRecognizer(tap)
         
     }
@@ -42,6 +41,7 @@ class ViewController: UIViewController {
                         
                     } else {
                         print("Created user successfully!")
+                        Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
                         self.performSegue(withIdentifier: "goToChat", sender: nil)
                     }
                 })

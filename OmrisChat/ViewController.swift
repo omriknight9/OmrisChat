@@ -16,7 +16,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func signInTapped(_ sender: Any) {
@@ -29,6 +36,10 @@ class ViewController: UIViewController {
                     
                     if error != nil {
                         print("There was an error: \(error)")
+                        let alert = UIAlertController(title: "Error", message: " The email must be in the currect format and the password must be at least 6 characters", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
                     } else {
                         print("Created user successfully!")
                         self.performSegue(withIdentifier: "goToChat", sender: nil)

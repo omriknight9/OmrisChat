@@ -47,7 +47,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xla-pw-fep">
                                 <rect key="frame" x="148" y="307" width="79" height="44"/>
@@ -168,11 +168,49 @@
                         <outlet property="descriptionTextField" destination="w43-rQ-PbW" id="3V9-9K-1ZF"/>
                         <outlet property="imageView" destination="Llh-gb-ITp" id="zRM-xS-VwU"/>
                         <outlet property="nextTapped" destination="EXB-PW-FfE" id="0lc-hX-5fd"/>
+                        <segue destination="NrB-qk-ckx" kind="show" identifier="selectUser" id="gcB-aA-TTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6d-SM-OFy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2911" y="123"/>
+        </scene>
+        <!--Select User View Controller-->
+        <scene sceneID="tJk-WJ-m8d">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="NrB-qk-ckx" customClass="SelectUserViewController" customModule="OmrisChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G83-Kq-gcM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djy-3p-u0g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0pP-5f-Kxr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="irH-t5-HZt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NrB-qk-ckx" id="fza-9H-o1O"/>
+                                    <outlet property="delegate" destination="NrB-qk-ckx" id="J2E-1a-xAn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="irH-t5-HZt" firstAttribute="top" secondItem="G83-Kq-gcM" secondAttribute="bottom" id="F9a-pr-x5U"/>
+                            <constraint firstItem="Djy-3p-u0g" firstAttribute="top" secondItem="irH-t5-HZt" secondAttribute="bottom" id="Hfv-pO-o0i"/>
+                            <constraint firstItem="irH-t5-HZt" firstAttribute="leading" secondItem="0pP-5f-Kxr" secondAttribute="leading" id="MsC-1u-y1V"/>
+                            <constraint firstAttribute="trailing" secondItem="irH-t5-HZt" secondAttribute="trailing" id="gLY-tS-5lQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="irH-t5-HZt" id="EPA-wJ-7ll"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9N-Kn-RIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3743" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WAE-tC-4Hw">

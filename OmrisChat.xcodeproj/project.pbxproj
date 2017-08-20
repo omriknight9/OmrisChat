@@ -18,6 +18,8 @@
 		5A37D7421F24D29A00BCE48A /* OmrisChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A37D7411F24D29A00BCE48A /* OmrisChatTests.swift */; };
 		5A37D74D1F24D29A00BCE48A /* OmrisChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A37D74C1F24D29A00BCE48A /* OmrisChatUITests.swift */; };
 		5A37D75B1F24D34A00BCE48A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A37D75A1F24D34A00BCE48A /* GoogleService-Info.plist */; };
+		5A456ECA1F49DF2B0056979D /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A456EC91F49DF2B0056979D /* Snap.swift */; };
+		5A456ECC1F49E7DF0056979D /* ViewSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A456ECB1F49E7DF0056979D /* ViewSnapViewController.swift */; };
 		5AF47AAA1F24DCFC00438815 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF47AA91F24DCFC00438815 /* SnapsViewController.swift */; };
 		5AF47AAC1F24DFA300438815 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF47AAB1F24DFA300438815 /* PictureViewController.swift */; };
 		A4C7394A20E215D4E66877EF /* Pods_OmrisChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE17BA2736DE0A7E76597B5 /* Pods_OmrisChat.framework */; };
@@ -59,6 +61,8 @@
 		5A37D74C1F24D29A00BCE48A /* OmrisChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmrisChatUITests.swift; sourceTree = "<group>"; };
 		5A37D74E1F24D29A00BCE48A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A37D75A1F24D34A00BCE48A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A456EC91F49DF2B0056979D /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		5A456ECB1F49E7DF0056979D /* ViewSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSnapViewController.swift; sourceTree = "<group>"; };
 		5AF47AA91F24DCFC00438815 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		5AF47AAB1F24DFA300438815 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		7B94DDC020D6F4AD33E092B4 /* Pods-OmrisChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OmrisChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-OmrisChat/Pods-OmrisChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				5AF47AA91F24DCFC00438815 /* SnapsViewController.swift */,
 				5AF47AAB1F24DFA300438815 /* PictureViewController.swift */,
 				5A25E4A01F48642F0084AC99 /* SelectUserViewController.swift */,
+				5A456ECB1F49E7DF0056979D /* ViewSnapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5A25E4A21F4873030084AC99 /* user.swift */,
+				5A456EC91F49DF2B0056979D /* Snap.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -379,6 +385,8 @@
 				5A25E4A31F4873030084AC99 /* user.swift in Sources */,
 				5A37D72A1F24D29A00BCE48A /* AppDelegate.swift in Sources */,
 				5AF47AAC1F24DFA300438815 /* PictureViewController.swift in Sources */,
+				5A456ECC1F49E7DF0056979D /* ViewSnapViewController.swift in Sources */,
+				5A456ECA1F49DF2B0056979D /* Snap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,15 +46,14 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let imagesFolder = Storage.storage().reference().child("images")
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        
-        
         imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
             print("We tried to upload!")
             if error != nil {
                 print("We had an error:\(error)")
             }else {
-                print(metadata?.downloadURL())
-                self.performSegue(withIdentifier: "selectUser", sender: nil)
+                print(metadata!.downloadURL()!.absoluteString)
+                
+                self.performSegue(withIdentifier: "selectUser", sender: metadata?.downloadURL()!.absoluteString)
             }
             
         })
@@ -62,6 +61,8 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+      let nextVC = segue.destination as! SelectUserViewController
+        nextVC.imageURL = sender as! String
+        nextVC.desc = descriptionTextField.text!
     }
 }

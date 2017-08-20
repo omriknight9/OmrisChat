@@ -14,6 +14,8 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet weak var tableView: UITableView!
     
     var users: [User] = []
+    var imageURL = ""
+    var desc = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +52,16 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
         
-        let snap = ["from":user.email, "description":"hello", "imageURL": "www.image.com"]
+        let snap = ["from":user.email, "description": desc, "imageURL": imageURL]
         Database.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
+        
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }
+
+
+
+
+
+

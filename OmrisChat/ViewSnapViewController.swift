@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+import Firebase
 
 class ViewSnapViewController: UIViewController {
     
@@ -19,7 +21,15 @@ class ViewSnapViewController: UIViewController {
         super.viewDidLoad()
         
         label.text = snap.desc
-
+        imageview.sd_setImage(with: URL(string: snap.imageURL))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").child(snap.key).removeValue()
+        
+        Storage.storage().reference().child("images").child("\(snap.uuid).jpg").delete { (error) in
+            print("Deleted the pic")
+        }
     }
 
 }

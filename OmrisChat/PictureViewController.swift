@@ -16,6 +16,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var imageView: UIImageView!
     
     var imagePicker = UIImagePickerController()
+    var uuid = NSUUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker.delegate = self
         imageView.layer.cornerRadius = 8.0
         imageView.clipsToBounds = true
+        nextTapped.isEnabled = false
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -30,7 +32,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
-        
+        nextTapped.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
     }
 
@@ -46,7 +48,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let imagesFolder = Storage.storage().reference().child("images")
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
+        imagesFolder.child("\(uuid).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
             print("We tried to upload!")
             if error != nil {
                 print("We had an error:\(error)")
@@ -61,8 +63,10 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
       let nextVC = segue.destination as! SelectUserViewController
         nextVC.imageURL = sender as! String
         nextVC.desc = descriptionTextField.text!
+        nextVC.uuid = uuid
     }
 }

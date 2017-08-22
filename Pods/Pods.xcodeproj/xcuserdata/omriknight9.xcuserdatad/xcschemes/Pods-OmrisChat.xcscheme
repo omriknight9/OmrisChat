@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9AFDC100385206C356A238471AEEEE05"
+               BlueprintIdentifier = "AA9815A99548F84E4EC2170053D04516"
                BuildableName = "Pods_OmrisChat.framework"
                BlueprintName = "Pods-OmrisChat"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9AFDC100385206C356A238471AEEEE05"
+            BlueprintIdentifier = "AA9815A99548F84E4EC2170053D04516"
             BuildableName = "Pods_OmrisChat.framework"
             BlueprintName = "Pods-OmrisChat"
             ReferencedContainer = "container:Pods.xcodeproj">
